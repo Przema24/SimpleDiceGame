@@ -17,37 +17,39 @@
     <body>
         <div class="page">
             <main class="gameContent">
-                <input class="newGameButton button" type="button" value="New game">
-                <div class="dice">
-                    <p>Dice</p>
+                <input class="newGameButton button" onclick="setStartConditions()" type="button" value="New game">
+                <div>
+                   <img src="#" id="diceK6" /> 
                 </div>
                 <div class="players">
-                    <section class="playerSection activePlayer">
+                    <section class="playerSection activePlayer" id="firstPlayer">
                         <div>
                             <p>First player</p>
-                            <p>Score: 0</p>
+                            <p id="firstPlayerScore">Score: 0</p>
                         </div>
                         <div>
-                            <p>Points: 0</p>
+                            <p id="firstPlayerPoints">Points: 0</p>
                         </div>
-                        <input class="button" type="button" value="Roll a dice">
-                        <input class="button" type="button" value="Hold points">
+                        <input class="button" onclick="rollFirstPlayerDice()"  type="button" value="Roll a dice">
+                        <input class="button" onclick="holdFirstPlayerPoints()"  type="button" value="Hold points">
                     </section>
-                    <section class="playerSection">
+                    <section class="playerSection" id="secondPlayer">
                         <div>
                             <p>Second player</p>
-                            <p>Score: 0</p>
+                            <p id="secondPlayerScore">Score: 0</p>
                         </div>
                         <div>
-                            <p>Points: 0</p>
+                            <p id="secondPlayerPoints">Points: 0</p>
                         </div>
-                        <input class="button" type="button" value="Roll a dice">
-                        <input class="button" type="button" value="Hold points">
+                        <input class="button" onclick="rollSecondPlayerDice()" type="button" value="Roll a dice">
+                        <input class="button" onclick="holdSecondPlayerPoints()" type="button" value="Hold points">
                     </section>
                 </div>
             </main>
         </div>
 
+
+    <script src="gameHandler.js"></script>
     </body>
 
 </html>

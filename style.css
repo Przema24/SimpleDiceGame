@@ -1,9 +1,10 @@
 body {
     background-color: #e6d6c1;
+    font-size: 18px;
 }
 
 .page {
-    margin-top: 100px;
+    margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -16,12 +17,10 @@ body {
     align-items: center;
 }
 
-.newGameButton {
-
-}
-
-.dice {
-
+#diceK6 {
+    width: 80px;
+    height: 80px;
+    margin: 10px;
 }
 
 .players {
@@ -34,11 +33,23 @@ body {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    width: 200px;
-    height: 300px;
+    width: 240px;
+    height: 360px;
     background-image: linear-gradient(to right bottom, #cdeec9, #083613);
     border-radius: 30px;
-    opacity: 75%;
+    opacity: 50%;
+}
+
+.playerSection div:last-of-type {
+    margin-bottom: 60px;
+}
+
+.playerSection p{
+    font-weight: bold;
+}
+
+.playerSection div:first-child p:first-of-type{
+    font-size: 24px;
 }
 
 .activePlayer {
@@ -52,4 +63,9 @@ body {
     border-radius: 10px;
     color: #ffffff;
     background-color:  #36740e;
+}
+
+.newGameButton {
+    width: 150px;
+    height: 50px;
 }
