@@ -43,8 +43,7 @@ function setStartConditions() {
     document.getElementById('secondPlayerPoints').textContent = 'Points: ' + 0;
 
     if (document.getElementById('firstPlayer').classList.contains('activePlayer') == false) {
-        document.getElementById('firstPlayer').classList.toggle('activePlayer');
-        document.getElementById('secondPlayer').classList.toggle('activePlayer');
+        switchPlayerActivity();
     }
 
     const diceArea = document.getElementById('diceK6');
@@ -130,12 +129,12 @@ function holdSecondPlayerPoints() {
 function checkWinning() {
     if (fPlayerScore >= 100)
     {
-        alert('first player win!');
+        alert('First player won!');
         setStartConditions();
     }
     if (sPlayerScore >= 100)
     {
-        alert('second player win!');
+        alert('Second player won!');
         setStartConditions();
     }
 }
