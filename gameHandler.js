@@ -37,10 +37,14 @@ function prepareDiceArea() {
 
 function setStartConditions() {
     document.getElementById('firstPlayerScore').textContent = 'Score: ' + 0;
-    document.getElementById('firstPlayerPoints').textContent = 'Points: ' + 0;;
-
+    document.getElementById('firstPlayerPoints').textContent = 'Points: ' + 0;
+    fPlayerScore = 0;
+    fPlayerPoints = 0;
+    
     document.getElementById('secondPlayerScore').textContent = 'Score: ' + 0;
     document.getElementById('secondPlayerPoints').textContent = 'Points: ' + 0;
+    sPlayerScore = 0;
+    sPlayerPoints = 0;
 
     if (document.getElementById('firstPlayer').classList.contains('activePlayer') == false) {
         switchPlayerActivity();
@@ -130,11 +134,9 @@ function checkWinning() {
     if (fPlayerScore >= 100)
     {
         alert('First player won!');
-        setStartConditions();
     }
     if (sPlayerScore >= 100)
     {
         alert('Second player won!');
-        setStartConditions();
     }
 }
